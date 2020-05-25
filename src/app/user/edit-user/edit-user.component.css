@@ -1,0 +1,27 @@
+.userForm{
+    width: 460px;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 36%;
+}
+.create-user{
+    padding: 20px;
+    /* background-color: #022030; */
+    color:white;
+    border: 1px solid gray;
+    box-shadow: 4px 0px 0px 2px #022030;
+}
+.create-user label{
+  margin-bottom: 10px;
+  color:#ababab;
+}
+.mat-form-field{
+    padding-left: 4px;
+}
+.mat-form-field input::placeholder{
+    color: white
+}
+.lock-pass{
+    cursor: none;
+}

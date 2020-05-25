@@ -1,0 +1,41 @@
+.welcome{
+    position: absolute;
+    top: 34%;
+    left: 38%;
+    /* background-color: #022030; */
+    /* border: 1px solid gray;
+    box-shadow: 2px 0px 0px 0px #eee; */
+    text-align: center;
+}
+header{
+    padding: 20px;
+    color:#aaa;
+    line-height: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.title{
+    padding: 20px;
+    color:#aaa;
+    position: absolute;
+    text-decoration: underline;
+    left: 35%;
+    top: 10%;
+    line-height: 10px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.login{
+    margin:0px auto;
+    padding: 20px;
+    /* background-color: #022030; */
+    /* border: 1px solid gray;
+    box-shadow: 2px 0px 1px 0px #eee; */
+}
+span button{
+    padding: 20px;
+    margin: 20px;
+}
+span{
+    padding: 30px;
+}

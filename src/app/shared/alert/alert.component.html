@@ -1,0 +1,8 @@
+<div class = "alert-backscreen" (click) = 'onCloseClick()'></div>
+<div class = "alert-box">
+    <p> Something gone wrong. Please try again..! </p>
+     <p class= "error-mssg">{{message | json}}</p>
+    <div class ='alert-actions'>
+        <button mat-raised-button color="primary" (click) = 'onCloseClick()'>Close</button>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+
+<div class="userForm">
+    <div class="create-user">
+        <label>Create User</label>
+    
+    <form [formGroup]="userForm" (ngSubmit) = "onSubmit(userForm.value)">
+        <div>
+        <mat-form-field>
+            <input matInput 
+            placeholder="First Name"
+            aria-label="State"
+            formControlName="firstName"/>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+         <input matInput 
+         placeholder="Last Name"
+         aria-label="State"
+         formControlName="lastName"/>
+         </mat-form-field>
+        </div>
+        <div>
+         <mat-form-field>
+            <input matInput 
+            placeholder="email"
+            aria-label="State"
+            formControlName="email" />
+         </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+              <input matInput type='password' formControlName="password" />
+         </mat-form-field>
+         
+        </div>
+        <div>
+         <button mat-raised-button color="primary" type="submit">Submit</button>
+        </div>
+    </form>
+  </div>
+</div>
+<section *ngIf ="userArray.length >0 ">
+    <div *ngFor= 'let userObj of userArray'>
+        <app-user-details [userData] = 'userObj' (userDetail) = selectedUser($event)></app-user-details>
+    </div>
+    
+</section>
+<!-- <section *ngIf ="userArray.length >0 ">
+    <app-user-list [userData] = 'userForm.value'></app-user-list>
+</section> -->
+
+
+<section>
+    <div *ngIf = "selected">
+        
+        <table>
+        
+            <tbody>
+                
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <tr>
+                    <td>{{selecteduser?.firstName}}</td>
+                    <td>{{selecteduser?.lastName}}</td>
+                    <td>{{selecteduser?.email}}</td>
+                    
+                </tr>
+                <td (click) = "editUser(selecteduser)" >Edit</td>
+                <td (click) = "deleteUser(selecteduser)" >Delete</td>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+
+<section *ngIf = "false">
+    <table>
+        
+        <tbody>
+            
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Website</th>
+            <tr *ngFor = "let user of usersData$ | async">
+                <td>{{user?.username}}</td>
+                <td>{{user?.email}}</td>
+                <td>{{user?.address?.city}}</td>
+                <td>{{user?.website}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+
+<router-outlet></router-outlet>

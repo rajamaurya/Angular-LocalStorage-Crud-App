@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SwUpdate} from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TODO-APP';
+  isUpdateAvailable: boolean = false;
+  constructor(update: SwUpdate){
+      update.available.subscribe(event=> {
+             this.isUpdateAvailable = true;
+            update.activateUpdate().then(()=> document.location.reload());
+      })
+  }
 }

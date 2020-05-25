@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="add-user">
+        <a (click) = "redirectToCreateUserPage()">
+          <span class="plus-icon">+ </span>
+          <span title="Add User" class="schedule-text">Create User</span>
+        </a>
+      </div>
+      <div class="main">
+    <table class="userListTable">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+            
+            <ng-container *ngIf = '!loading; else noContent'>
+                <tr  *ngFor = "let user of users$ | async; let i = index">
+                    <td>{{user?.firstName}}</td>
+                    <td>{{user?.lastName}}</td>
+                    <td>{{user?.email}}</td>
+                    <td>{{user?.password}}</td>
+                    <td><span (click) = "editUser(i)" class="action" >Edit </span> | <span (click) = "deleteUser(i)" class="action">Delete</span></td>
+                </tr>
+            </ng-container>
+            <ng-template #noContent>
+                <div class="matloader" *ngIf="loading">
+                    <mat-spinner [diameter]="25" [strokeWidth]="2.2"></mat-spinner>
+                    <span>Loading...</span>
+                  </div>
+            </ng-template>
+            
+        </tbody>
+    </table>
+</div>
+</div>
+<div *ngIf = "(users$ | async)?.length == 0 ">
+  <h4>NO MORE USER LEFT..</h4>
+</div>
+<router-outlet></router-outlet>

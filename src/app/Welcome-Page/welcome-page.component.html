@@ -1,0 +1,13 @@
+<header class = 'title'>{{title}}</header>
+<div class ="welcome">
+    <header>Welcome to the localhost server !</header>
+    <div class="login">
+        <span>
+           <button mat-raised-button color="primary" [routerLink]="['/login']" routerLinkActive="router-link-active">Login</button>
+           <button  mat-raised-button  [routerLink]="['/register']" routerLinkActive="router-link-active">Register</button>
+        </span>
+    </div>
+    
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,83 @@
+.container{
+    width: 70%;
+    margin-left: 240px;
+    margin-top: -45%;
+}
+.main{
+    padding-top: 100px;
+}
+table{
+    text-align: center;
+    padding-left: 30%;
+}
+table td {
+    padding: 20px;
+}
+table tr {
+       text-align: left;
+       padding: 20px;
+       color: #ababab;
+       border: 1 px solid #ccc;
+       box-shadow: 0px 0px 1px 0px gray;
+}
+table tr th {
+       text-align: left;
+       text-decoration: underline;
+       padding: 20px;
+       color: #ccc;
+       border: 1 px solid #ccc;
+       box-shadow: 0px 0px 1px 0px gray;
+}
+.noContent{
+    color: #ababab;
+    font-family: 'Times New Roman', Times, serif;
+}
+.matloader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 9;
+    width: 80px;
+    top: 290px;
+    margin: auto;
+    border: 1 px solid #ccc;
+    padding: 8px 20px;
+    box-shadow: 0px 0px 6px #0000003b;
+  }
+  .matloader span {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    font-family: latobold;
+    color: #000;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+  }
+  h4{
+      color:white
+  }
+  .add-user{
+      text-align: right;
+      padding-top: 10px;
+      padding-right: 20px;
+      cursor: pointer;
+  }
+  .schedule-text:hover{
+      color:blueviolet;
+  }
+  .schedule-text{
+      color: white;
+  }
+  .plus-icon{
+      color: white;
+      
+  }
+  .action{
+      cursor: pointer;
+  }
+  .action:hover{
+      border: 1px solid #ababab;
+      box-shadow: 1px 0px 1px gray;
+  }
+  

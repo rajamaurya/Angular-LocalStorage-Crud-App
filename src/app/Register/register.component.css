@@ -1,0 +1,29 @@
+.registerFrom{
+    padding: 30px;
+}
+.form-field{
+    padding:10px;
+}
+.mat-form-field{
+    font-size: 16px;
+}
+.main{
+    width: 40vw;
+    position: absolute;
+    top: 35%;
+    left: 36%;
+    text-align: center;
+    justify-content: center;
+    background-color: gray;
+    border: 1px solid #ccc;
+    box-shadow: 2px 0px 0px 1px lightgray;
+}
+label{
+    width: 30vw;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: purple;
+    text-transform: capitalize;
+    text-align: center;
+}

@@ -1,0 +1,10 @@
+
+
+<table>
+    <tr *ngFor = "let userDetail of users; let i = index">
+    <td (click) = "getSelectedUserDetails(users[i])">
+        {{userDetail?.firstName}} {{userDetail?.laststName}}
+    </td>
+    </tr>
+
+</table>

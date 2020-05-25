@@ -1,0 +1,41 @@
+<div class="main">
+    
+<section class="registerFrom">
+  <label>register</label>
+    <form [formGroup] = 'registerForm' (ngSubmit)= "submit(registerForm.value)">
+        <div class="form-field">
+          <mat-form-field>
+            <input matInput 
+            placeholder="First Name"
+            aria-label="State"
+            formControlName="firstName"/>
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+        <mat-form-field>
+         <input matInput 
+         placeholder="Last Name"
+         aria-label="State"
+         formControlName="lastName"/>
+         </mat-form-field>
+        </div>
+         <div class="form-field">
+         <mat-form-field>
+            <input matInput 
+            placeholder="Email"
+            aria-label="State"
+            formControlName="email" />
+         </mat-form-field>
+        </div>
+        <div class="form-field">
+          <mat-form-field>
+              <input matInput placeholder="Password" formControlName="password" />
+         </mat-form-field>
+        </div>
+        <div class="form-button">
+         <button mat-raised-button type="submit">Submit</button>
+         </div>
+    </form>
+
+</section>
+</div>

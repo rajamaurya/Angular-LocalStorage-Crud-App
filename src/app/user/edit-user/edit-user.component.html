@@ -1,0 +1,32 @@
+<div class="userForm">
+    <div class="create-user">
+        <label>Edit User</label>
+    <form [formGroup]="edituserForm" (ngSubmit) = "onSubmit(edituserForm.value)">
+        <mat-form-field>
+            <input matInput 
+            placeholder="First Name"
+            aria-label="State"
+            formControlName="firstName"/>
+        </mat-form-field>
+        <mat-form-field>
+         <input matInput 
+         placeholder="Last Name"
+         aria-label="State"
+         formControlName="lastName"/>
+         </mat-form-field>
+         <mat-form-field>
+            <input matInput 
+            placeholder="email"
+            aria-label="State"
+            formControlName="email" />
+         </mat-form-field>
+          <span class="lock-pass">
+          <mat-form-field>
+              <input [disabled]=""  matInput type="password" placeholder="password" formControlName="password" />
+         </mat-form-field>
+        </span>
+        
+         <button mat-raised-button color='primary' type="submit">Save Edit</button>
+    </form>
+    </div>
+</div>

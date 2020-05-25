@@ -1,0 +1,31 @@
+.alert-backscreen{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+}
+.alert-box {
+    position: fixed;
+    top: 30 vh;
+    left: 34vw;
+    width: 30vw;
+    height:auto;
+    padding: 38px;
+    color: grey;
+    font-size: 18px;
+    background-color:white;
+    z-index: 100;
+    border:1px solid #ababab;
+    box-shadow: 0 0 10px 0 grey;
+}
+.alert-actions{
+    padding-top: 20px;
+    text-align: center;
+}
+.error-mssg{
+    color: purple;
+    font-size: 16px;
+}
